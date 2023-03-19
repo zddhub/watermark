@@ -32,7 +32,7 @@
 
 .copyright {
   margin-top: 200px;
-  font-size: 20px;
+  font-size: calc(2px + 2vmin);
   color: #888;
 }
 
