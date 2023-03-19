@@ -30,6 +30,22 @@
   color: black;
 }
 
+.copyright {
+  margin-top: 200px;
+  font-size: 20px;
+  color: #888;
+}
+
+.bar {
+  width: 1px;
+    height: 14px;
+    background: #e0e0e0;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    padding: 0;
+}
+
 .App-link {
   color: #61dafb;
 }

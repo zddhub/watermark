@@ -16,6 +16,12 @@ function App() {
           <li className="rule">不能禁用 JS</li>
           <li className="rule">最终解释权归 zddhub 所有</li>
         </ul>
+
+          <copyright class="copyright typo-small">
+            <span class="copyright">&copy;2023 ZDDHUB </span>
+            <span class="bar"></span>
+            <span> All rights reserved</span>
+          </copyright>
       </header>
     </div>
   );
