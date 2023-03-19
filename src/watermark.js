@@ -8,16 +8,13 @@ function createMaskDiv(left, top) {
 
 function handleMutation(mutations, observer) {
   mutations.forEach((mutation) => {
-    console.log('Mutation event detected:', mutation);
     const watermark = document.getElementById('eb-watermark');
     if (mutation.removedNodes.length > 0 || mutation.target.id === 'eb-watermark') {
       if (!watermark) {
-        console.log('Watermark not found, recreating...');
         createWatermark();
       }
     }
     if (mutation.type === 'attributes' && (mutation.target.id === 'eb-watermark' || mutation.attributeName === 'style')) {
-      console.log('Watermark attribute changed, recreating...');
       if (watermark) {
         watermark.remove();
       }
@@ -28,7 +25,6 @@ function handleMutation(mutations, observer) {
 
 function handleShadowRootMutation(mutations, shadowRootObserver, shadowRoot) {
   mutations.forEach((mutation) => {
-    console.log('Shadow root mutation event detected:', mutation);
     if (mutation.removedNodes.length > 0 || mutation.type === 'attributes' || (mutation.type === 'characterData' && (mutation.target.parentNode === shadowRoot || mutation.target.parentNode.parentNode === shadowRoot))) {
       const watermark = document.getElementById('eb-watermark');
       if (watermark) {
