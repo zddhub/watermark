@@ -1,7 +1,7 @@
 function createMaskDiv(left, top) {
   const maskDiv = document.createElement('div');
   maskDiv.id = 'mask_div_id00';
-  maskDiv.style.cssText = `transform: rotate(-15deg); position: absolute; left: ${left}px; top: ${top}px; overflow: hidden; z-index: 9999999; opacity: 0.5; font-family: 微软雅黑; color: black; text-align: center; width: 140px; height: 40px; display: block;`;
+  maskDiv.style.cssText = `transform: rotate(-15deg); position: absolute; left: ${left}px; top: ${top}px; overflow: hidden; z-index: 9999999; opacity: 0.1; font-family: 微软雅黑; color: black; text-align: center; width: 140px; height: 40px; display: block;`;
   maskDiv.innerText = 'zddhub.com';
   return maskDiv;
 }
