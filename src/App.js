@@ -9,7 +9,7 @@ function App() {
 
         <ul>
           <strong><p className="rule">规则如下：</p></strong>
-          <li className="rule">你是第一个发现这个方法的人</li>
+          <li className="rule">你是第一个找到方法的人</li>
           <li className="rule">发送邮件或者微信给 zddhub，给出复现步骤</li>
           <li className="rule">我能按照步骤复现</li>
           <li className="rule">只使用 Chrome 浏览器</li>
