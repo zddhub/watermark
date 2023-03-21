@@ -15,6 +15,8 @@ function App() {
           <li className="rule">只使用 Chrome 浏览器</li>
           <li className="rule">不能禁用 JS</li>
           <li className="rule">不能使用颜色去水印，比如 Dark mode, 设置背景色和水印颜色一致等</li>
+          <li className="rule">不能从网络层下手，比如 Mock JS，HTML 等手段</li>
+          <li className="rule">不能自己写一个相同的页面，或者使用截图等手段</li>
           <li className="rule">最终解释权归 zddhub 所有</li>
         </ul>
 
