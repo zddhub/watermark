@@ -1,3 +1,10 @@
+// This file contains the implementation of a watermark feature for a web page.
+// It creates a watermark with the text "zddhub.com" and adds it to the page.
+// The watermark is displayed at a -15 degree angle and is repeated across the entire page.
+// The watermark is also responsive to changes in the page's content and window resizing events.
+
+// GPT-4 wrote 90% code and zddhub assisted it
+
 function createMaskDiv(left, top) {
   const maskDiv = document.createElement('div');
   maskDiv.id = 'mask_div_id00';

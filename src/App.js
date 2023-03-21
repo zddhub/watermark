@@ -20,11 +20,11 @@ function App() {
           <li className="rule">最终解释权归 zddhub 所有</li>
         </ul>
 
-          <copyright class="copyright typo-small">
-            <span class="copyright">&copy;2023 ZDDHUB </span>
-            <span class="bar"></span>
+          <div className="copyright typo-small">
+            <span className="copyright">&copy;2023 <a className="link" href="https://www.zddhub.com">ZDDHUB</a> </span>
+            <span className="bar"></span>
             <span> All rights reserved</span>
-          </copyright>
+          </div>
       </header>
     </div>
   );

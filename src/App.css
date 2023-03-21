@@ -36,6 +36,9 @@
   color: #888;
 }
 
+.link {
+  text-decoration: underline;
+}
 .bar {
   width: 1px;
     height: 14px;
