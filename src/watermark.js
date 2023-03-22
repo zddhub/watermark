@@ -13,7 +13,7 @@ function createMaskDiv(left, top) {
   return maskDiv;
 }
 
-function handleMutation(mutations, observer) {
+function handleMutation(mutations) {
   mutations.forEach((mutation) => {
     const watermark = document.getElementById('eb-watermark');
     if (mutation.removedNodes.length > 0 || mutation.target.id === 'eb-watermark') {
@@ -28,9 +28,17 @@ function handleMutation(mutations, observer) {
       createWatermark();
     }
   });
+
+  const watermark = document.body.querySelector('#eb-watermark');
+  if (!watermark || watermark.parentElement !== document.body || !watermark.shadowRoot || !watermark.shadowRoot.querySelector('#mask_div_id00')) {
+    if (watermark) {
+      watermark.remove();
+    }
+    createWatermark();
+  }
 }
 
-function handleShadowRootMutation(mutations, shadowRootObserver, shadowRoot) {
+function handleShadowRootMutation(mutations, shadowRoot) {
   mutations.forEach((mutation) => {
     if (mutation.removedNodes.length > 0 || mutation.type === 'attributes' || (mutation.type === 'characterData' && (mutation.target.parentNode === shadowRoot || mutation.target.parentNode.parentNode === shadowRoot))) {
       const watermark = document.getElementById('eb-watermark');
@@ -60,7 +68,7 @@ function createWatermark() {
   const observer = new MutationObserver(handleMutation);
   observer.observe(document.body, observerConfig);
 
-  const shadowRootObserver = new MutationObserver((mutations) => handleShadowRootMutation(mutations, shadowRootObserver, shadowRoot));
+  const shadowRootObserver = new MutationObserver((mutations) => handleShadowRootMutation(mutations, shadowRoot));
   shadowRootObserver.observe(shadowRoot, { ...observerConfig, characterData: true });
 
   document.body.appendChild(div);
