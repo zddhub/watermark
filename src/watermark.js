@@ -45,7 +45,7 @@ function handleShadowRootMutation(mutations, shadowRootObserver, shadowRoot) {
 function createWatermark() {
   const div = document.createElement('div');
   div.id = 'eb-watermark';
-  div.style.cssText = "pointer-events: none !important; display: block !important;";
+  div.style.cssText = "pointer-events: none !important; display: block !important; visibility: visible !important;";
 
   const shadowRoot = div.attachShadow({ mode: 'open' });
 
