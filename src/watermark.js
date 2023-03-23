@@ -84,4 +84,12 @@ function handleResize() {
 
 window.addEventListener('resize', handleResize);
 
+setInterval(() => {
+  const watermark = document.getElementById('eb-watermark');
+  if (!watermark) {
+    window.location.reload();
+  }
+}, 2000);
+
+
 export default createWatermark;
