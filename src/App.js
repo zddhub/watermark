@@ -20,11 +20,16 @@ function App() {
           <li className="rule">最终解释权归 zddhub 所有</li>
         </ul>
 
-          <div className="copyright typo-small">
-            <span className="copyright">&copy;2023 <a className="link" href="https://www.zddhub.com">ZDDHUB</a> </span>
-            <span className="bar"></span>
-            <span> All rights reserved</span>
+        <div className="copyright typo-small">
+
+          <div className="video typo-small">
+            <span>本页面利用 ChatGPT 编程实现，去 <a className="link" href="https://www.bilibili.com/video/BV1Ak4y147t6">B 站看视频</a>了解详情</span>
           </div>
+
+          <span className="copyright">&copy;2023 <a className="link" href="https://www.zddhub.com">ZDDHUB</a> </span>
+          <span className="bar"></span>
+          <span> All rights reserved</span>
+        </div>
       </header>
     </div>
   );

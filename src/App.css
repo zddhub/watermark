@@ -31,7 +31,7 @@
 }
 
 .copyright {
-  margin-top: 200px;
+  margin-top: 100px;
   font-size: calc(2px + 2vmin);
   color: #888;
 }
@@ -60,4 +60,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.video {
+  margin-bottom: 100px;
+}
+
+.typo-small {
+  font-size: calc(2px + 2vmin);
 }
